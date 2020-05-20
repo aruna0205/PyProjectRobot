@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200506 16:10:34.843" rpa="false">
+<suite id="s1" name="Assesment Rizwan" source="C:\Users\aruna\PycharmProjects\RobotAutomation\Test\Assesment_Rizwan.Robot">
+<test id="s1-t1" name="Check value is less than 20">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${value} &lt; 20</arg>
+<arg>Log to console</arg>
+<arg>"Value is less than 20"</arg>
+<arg>ELSE</arg>
+<arg>Log to console</arg>
+<arg>"Value is greater than 20"</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Value is less than 20"</arg>
+</arguments>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<tags>
+<tag>comparision</tag>
+</tags>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Sum of three variable">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<assign>
+<var>${first}</var>
+</assign>
+<msg timestamp="20200506 16:10:34.890" level="INFO">${first} = 10</msg>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${second}</var>
+</assign>
+<msg timestamp="20200506 16:10:34.890" level="INFO">${second} = 20</msg>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>30</arg>
+</arguments>
+<assign>
+<var>${third}</var>
+</assign>
+<msg timestamp="20200506 16:10:34.890" level="INFO">${third} = 30</msg>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<kw name="Calculate Sum">
+<arguments>
+<arg>${first}</arg>
+<arg>${second}</arg>
+<arg>${third}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${first}+${second}+${third}</arg>
+</arguments>
+<assign>
+<var>${Sum}</var>
+</assign>
+<msg timestamp="20200506 16:10:34.890" level="INFO">${Sum} = 60</msg>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>the Sum of ${first},${second},${third} is {Sum}</arg>
+</arguments>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890"></status>
+</kw>
+<tags>
+<tag>Adding</tag>
+</tags>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:34.890" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Append single value in List">
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>Enter a number</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20200506 16:10:38.243" level="INFO">${username} = 8</msg>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:38.243"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${Value_List}</arg>
+<arg>${username}</arg>
+</arguments>
+<status status="PASS" starttime="20200506 16:10:38.258" endtime="20200506 16:10:38.258"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{Value_List}</arg>
+</arguments>
+<msg timestamp="20200506 16:10:38.258" level="INFO">1</msg>
+<msg timestamp="20200506 16:10:38.258" level="INFO">10</msg>
+<msg timestamp="20200506 16:10:38.258" level="INFO">45</msg>
+<msg timestamp="20200506 16:10:38.258" level="INFO">76</msg>
+<msg timestamp="20200506 16:10:38.258" level="INFO">89</msg>
+<msg timestamp="20200506 16:10:38.258" level="INFO">8</msg>
+<status status="PASS" starttime="20200506 16:10:38.258" endtime="20200506 16:10:38.258"></status>
+</kw>
+<tags>
+<tag>Appending</tag>
+</tags>
+<status status="PASS" starttime="20200506 16:10:34.890" endtime="20200506 16:10:38.258" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200506 16:10:34.843" endtime="20200506 16:10:38.258"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Adding</stat>
+<stat pass="1" fail="0">Appending</stat>
+<stat pass="1" fail="0">comparision</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Assesment Rizwan">Assesment Rizwan</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

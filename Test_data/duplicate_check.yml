@@ -1,0 +1,10 @@
+#tablename:
+#- columnname
+
+Users:
+  - email
+emp_dept:
+  - emp_id
+  - dept_id
+students:
+  - id
